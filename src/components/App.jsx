@@ -75,7 +75,9 @@ export class App extends Component {
         <Searchbar onSubmit={this.changeQuery} />
         {images.length > 0 && <ImageGallery images={images} />}
 
-        {page < totalPages && <Button handleClick={this.addMoreImages} />}
+        {page < totalPages && images.length > 0 && (
+          <Button handleClick={this.addMoreImages} />
+        )}
         <Toaster />
         {loading && <Loader />}
       </Layout>
