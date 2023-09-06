@@ -5,7 +5,6 @@ export const Searchbar = ({ onSubmit }) => {
         onSubmit={evt => {
           evt.preventDefault();
           onSubmit(evt.target.elements.query.value);
-          evt.target.reset();
         }}
         className="SearchForm"
       >
